@@ -1,6 +1,6 @@
 {
 	"name": "extract-dmg",
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"description": "Extract a DMG file on MacOS.",
 	"repository": "https://github.com/Richienb/extract-dmg.git",
 	"author": "Richie Bendall <richiebendall@gmail.com>",
