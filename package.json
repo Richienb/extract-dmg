@@ -53,6 +53,6 @@
 		"extends": "richienb/node"
 	},
 	"ava": {
-		"timeout": "1m"
+		"timeout": "10m"
 	}
 }
