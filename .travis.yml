@@ -10,6 +10,3 @@ cache:
 node_js:
   - "lts/*"
   - "node"
-
-script:
-  - travis_wait yarn test

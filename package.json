@@ -51,5 +51,8 @@
 	},
 	"xo": {
 		"extends": "richienb/node"
+	},
+	"ava": {
+		"timeout": "1m"
 	}
 }
