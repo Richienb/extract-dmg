@@ -1,8 +1,8 @@
 {
-	"name": "the-module",
+	"name": "extract-dmg",
 	"version": "0.0.0",
-	"description": "My awesome module.",
-	"repository": "https://github.com/Richienb/the-module.git",
+	"description": "Extract a DMG file on MacOS.",
+	"repository": "https://github.com/Richienb/extract-dmg.git",
 	"author": "Richie Bendall <richiebendall@gmail.com>",
 	"license": "MIT",
 	"main": "index.js",
@@ -17,8 +17,29 @@
 		"lint": "xo",
 		"test": "yarn lint && ava"
 	},
-	"keywords": [],
-	"dependencies": {},
+	"keywords": [
+		"dmg",
+		"extract",
+		"macos",
+		"archive",
+		"decompress",
+		"unzip",
+		"uncompress",
+		"take",
+		"out",
+		"view",
+		"list",
+		"copy",
+		"recursive"
+	],
+	"dependencies": {
+		"dmg": "^0.1.0",
+		"file-ext": "^1.0.0",
+		"fs-extra": "^8.1.0",
+		"get-ext": "^1.0.2",
+		"ow": "^0.16.0",
+		"pify": "^5.0.0"
+	},
 	"devDependencies": {
 		"ava": "^3.3.0",
 		"eslint-config-richienb": "^0.3.0",

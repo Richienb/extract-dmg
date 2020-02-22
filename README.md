@@ -1,41 +1,41 @@
-# The module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# Extract DMG [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/extract-dmg/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/extract-dmg)
 
-My awesome module.
+Extract a DMG file on MacOS.
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/extract-dmg.png)](https://npmjs.com/package/extract-dmg)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install extract-dmg
 ```
 
 ## Usage
 
 ```js
-const theModule = require("the-module");
+const extractDmg = require("extract-dmg");
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+(async () => {
+	await extractDmg("a.dmg"); // Get contents
+	//=> ["a", "b"]
+
+	await extractDmg("a.dmg", "extractDir"); // Extract and get contents
+	//=> ["a", "b"]
+})()
 ```
 
 ## API
 
-### theModule(input, options?)
+### extractDmg(filename, destination?)
 
-#### input
+#### filename
 
 Type: `string`
 
-Lorem ipsum.
+The DMG to extract.
 
-#### options
+#### destination
 
-Type: `object`
+Type: `string`
 
-##### postfix
-
-Type: `string`\
-Default: `rainbows`
-
-Lorem ipsum.
+The destination directory to place the extracted files. Leave blank to skip extraction.

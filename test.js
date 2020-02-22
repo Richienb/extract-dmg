@@ -1,13 +1,11 @@
 const test = require("ava")
-const theModule = require(".")
+const extractDmg = require(".")
 
-test("main", (t) => {
-	t.throws(() => {
-		theModule(123)
-	}, {
-		instanceOf: TypeError,
-		message: "Expected a string, got number",
-	})
-
-	t.is(theModule("unicorns"), "unicorns & rainbows")
+test("main", async (t) => {
+	if (process.platform === "darwin") {
+		const contents = await extractDmg("fixtures/vlc-3.0.8.dmg")
+		t.deepEqual(contents, ["vlc-3.0.8"])
+	} else {
+		t.pass()
+	}
 })
