@@ -38,7 +38,8 @@
 		"fs-extra": "^8.1.0",
 		"get-ext": "^1.0.2",
 		"ow": "^0.16.0",
-		"pify": "^5.0.0"
+		"pify": "^5.0.0",
+		"recursive-readdir": "^2.2.2"
 	},
 	"devDependencies": {
 		"ava": "^3.3.0",
