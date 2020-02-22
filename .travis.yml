@@ -1,12 +1,12 @@
 os:
-    - linux
-	- osx
+  - linux
+  - osx
 
 language: node_js
 
 cache:
-    - yarn
+  - yarn
 
 node_js:
-    - "lts/*"
-    - "node"
+  - "lts/*"
+  - "node"
