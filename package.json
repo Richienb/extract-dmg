@@ -34,10 +34,7 @@
 	],
 	"dependencies": {
 		"dmg": "^0.1.0",
-		"file-ext": "^1.0.0",
-		"fs-extra": "^8.1.0",
-		"ow": "^0.16.0",
-		"pify": "^5.0.0"
+		"fs-extra": "^8.1.0"
 	},
 	"devDependencies": {
 		"ava": "^3.3.0",

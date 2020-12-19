@@ -1,14 +1,17 @@
 "use strict"
 
-const pify = require("pify")
-const dmg = pify(require("dmg"))
+const {promisify} = require("util")
+const dmg = promisify(require("dmg"))
 const fs = require("fs-extra")
-const ow = require("ow")
-const fileExtension = require("file-ext")
 
 module.exports = async (filename, destination) => {
-	ow(filename, ow.string.is((value) => fileExtension(value) === "dmg" && fs.pathExistsSync(value)))
-	ow(destination, ow.optional.string)
+	if (typeof filename !== "string" || !filename.endsWith(".dmg")) {
+		throw new TypeError(`Expected the path of a dmg file, got ${typeof filename}`)
+	}
+
+	if (destination && typeof destination !== "string") {
+		throw new TypeError(`Expected the destination to be a string, got ${typeof destination}`)
+	}
 
 	const mountPath = await dmg.mount(filename)
 	const files = await fs.readdir(mountPath)
